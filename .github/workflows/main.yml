@@ -1,4 +1,4 @@
-name: PR Lint
+name: JIRA Check
 on: [pull_request]
 jobs:
   pr_lint:
