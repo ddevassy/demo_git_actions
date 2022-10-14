@@ -1,6 +1,6 @@
 name: Manage versions
 
-on: [push, pull_request]
+on: [push]
 
 jobs:
   bump:
@@ -15,31 +15,5 @@ jobs:
       - name: Bump Versions
         uses: michmich112/version-bumper@master
         with:
-          scheme: semantic
-          username: DoomGuy
-          email: guy@doom.id
-          version-file: "./VERSION"
-          files: >
-            [
-              "./VERSION"
-            ] 
-          rules: >
-            {
-              "trigger":"commit",
-              "branch": "staging",
-              "suffix": "-beta",
-              "bump":"build"
-            },{
-              "trigger": "pull-request",
-              "destBranch": "main",
-              "suffix": "-rc",
-              "bump": "minor",
-              "tag": true
-            }, {
-              "trigger":"commit",
-              "branch":"release",
-              "bump":"major",
-              "tag": true,
-              "reset":["minor","build"]
-            }
+          options-file: "./.github/workflows/options.json"
           github-token: ${{ secrets.GITHUB_TOKEN }}
