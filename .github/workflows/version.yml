@@ -23,23 +23,5 @@ jobs:
             [
              "./VERSION"
             ] 
-          rules: >
-            [{
-              "trigger":"commit",
-              "branch": "staging",
-              "suffix": "-beta",
-              "bump":"build"
-            },{
-              "trigger": "pull-request",
-              "destBranch": "main",
-              "suffix": "-rc",
-              "bump": "minor",
-              "tag": true
-            }, {
-              "trigger":"commit",
-              "branch":"release",
-              "bump":"major",
-              "tag": true,
-              "reset":["minor","build"]
-            }]'
+          rules: '[{"trigger": "commit", "bump": "build", "branch": "master", "tag": true},{"trigger": "manual", "bump": "minor", "reset": "build", "branch": "master", "tag": true} ]'
           github-token: ${{ secrets.GITHUB_TOKEN }}
