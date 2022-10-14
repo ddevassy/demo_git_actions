@@ -5,8 +5,8 @@
   "versionFile": "./package.json", 
   "files": [
     {
-      "path": VERSION
-      "line": 1
+      "path": // path to file containing version to be updated
+      "line": // optional line number if needed
     }
   ],
   "rules": [
