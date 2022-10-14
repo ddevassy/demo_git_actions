@@ -21,7 +21,7 @@ jobs:
           version-file: "./VERSION"
           files: >
             [
-              "./package-lock.json"
+              "./VERSION"
             ] 
           rules: >
             [{
@@ -31,7 +31,7 @@ jobs:
               "bump":"build"
             },{
               "trigger": "pull-request",
-              "destBranch": "master",
+              "destBranch": "main",
               "suffix": "-rc",
               "bump": "minor",
               "tag": true
