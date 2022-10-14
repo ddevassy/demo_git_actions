@@ -24,7 +24,7 @@ jobs:
               "./VERSION"
             ] 
           rules: >
-            [{
+            {
               "trigger":"commit",
               "branch": "staging",
               "suffix": "-beta",
@@ -41,5 +41,5 @@ jobs:
               "bump":"major",
               "tag": true,
               "reset":["minor","build"]
-            }]'
+            }
           github-token: ${{ secrets.GITHUB_TOKEN }}
