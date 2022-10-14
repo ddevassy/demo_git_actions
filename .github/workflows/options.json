@@ -1,18 +1,18 @@
 {
   "scheme": "semantic",
-  "username": "NTA-Bot",
-  "email": "guy@nta-bot",
-  "schemeDefinition": "major.minor[.build][->patch]",
-  "versionFile": "./VERSION",
+  
+  // file where the current version can be found
+  "versionFile": "./VERSION", 
   "files": [
     {
-      "path": // path to file containing version to be updated
-      "line": // optional line number if needed
+      "path":  "./VERSION"
+      "line": 1
     }
   ],
   "rules": [
     {
       "trigger": "commit",
+      "branch": "hotfix",
       "bump": "build"
     },
     {
@@ -30,5 +30,4 @@
         "build"
       ]
     }
-  ]
-}
+  ]}
