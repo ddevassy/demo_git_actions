@@ -1,17 +1,12 @@
 {
-  "scheme": "semantic",
-  
-  "versionFile": "./VERSION", 
-  "files": [
-    {
-      "path": 
-      "line": 
-    }
-  ],
+  "scheme": "custom",
+  "username": "NTA-Bot",
+  "email": "guy@nta-bot",
+  "schemeDefinition": "major.minor[.build][->patch]",
+  "versionFile": "./VERSION",
   "rules": [
     {
       "trigger": "commit",
-      "branch": "hotfix",
       "bump": "build"
     },
     {
@@ -29,4 +24,5 @@
         "build"
       ]
     }
-  ]}
+  ]
+}
