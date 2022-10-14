@@ -4,6 +4,12 @@
   "email": "guy@nta-bot",
   "schemeDefinition": "major.minor[.build][->patch]",
   "versionFile": "./VERSION",
+  "files": [
+    {
+      "path": // path to file containing version to be updated
+      "line": // optional line number if needed
+    }
+  ],
   "rules": [
     {
       "trigger": "commit",
