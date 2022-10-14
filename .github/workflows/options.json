@@ -1,5 +1,5 @@
 {
-  "scheme": "custom",
+  "scheme": "semantic",
   "username": "NTA-Bot",
   "email": "guy@nta-bot",
   "schemeDefinition": "major.minor[.build][->patch]",
