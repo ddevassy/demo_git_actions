@@ -1,9 +1,11 @@
 {
-  "Scheme": "semantic",
-  "VersionFile": "./VERSION", 
-  "Files": [
+  "scheme": "semantic",
+  
+  // file where the current version can be found
+  "versionFile": "./VERSION", 
+  "files": [
     {
-      "path":  "./VERSION"
+      "path":  "./VERSION", 
       "line": 1
     }
   ],
