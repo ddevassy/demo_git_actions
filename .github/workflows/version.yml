@@ -1,15 +1,45 @@
 name: Manage versions
-on: [push]
+
+on: [push, pull_request]
+
 jobs:
   bump:
     runs-on: ubuntu-latest
+   
     steps:
-      - uses: actions/checkout@v2      
+      # Checkout action is required
+      - uses: actions/checkout@v2
       - uses: actions/setup-node@v1
         with:
-          node-version: '16'      
-      - name: Version Bumper
-        uses: michmich112/version-bumper@v1.0.1
+          node-version: '12'
+      - name: Bump Versions
+        uses: michmich112/version-bumper@master
         with:
-          options-file: "./.github/workflows/options.json"
+          scheme: semantic
+          username: NTA-Bot
+          email: pylook@logitech.com
+          version-file: "./VERSION"
+          files: >
+            [
+              "./VERSION"
+            ] 
+          rules: >
+            [{
+              "trigger":"commit",
+              "branch": "staging",
+              "suffix": "-beta",
+              "bump":"build"
+            },{
+              "trigger": "pull-request",
+              "destBranch": "main",
+              "suffix": "-rc",
+              "bump": "minor",
+              "tag": true
+            }, {
+              "trigger":"commit",
+              "branch":"release",
+              "bump":"major",
+              "tag": true,
+              "reset":["minor","build"]
+            }]'
           github-token: ${{ secrets.GITHUB_TOKEN }}
