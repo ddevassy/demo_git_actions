@@ -1,7 +1,5 @@
 {
   "scheme": "semantic",
-  
-  // file where the current version can be found
   "versionFile": "./VERSION", 
   "files": [
     {
