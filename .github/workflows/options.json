@@ -1,7 +1,7 @@
 {
-  "scheme": "semantic",
-  "versionFile": "./VERSION", 
-  "files": [
+  "Scheme": "semantic",
+  "VersionFile": "./VERSION", 
+  "Files": [
     {
       "path":  "./VERSION"
       "line": 1
