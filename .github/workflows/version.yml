@@ -7,7 +7,7 @@ jobs:
       - uses: actions/checkout@v2      
       - uses: actions/setup-node@v1
         with:
-          node-version: '12'      
+          node-version: '16'      
       - name: Version Bumper
         uses: ddevassy/version-bumper@v1.0.1
         with:
