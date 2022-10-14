@@ -15,5 +15,5 @@ jobs:
       - name: Bump Versions
         uses: michmich112/version-bumper@master
         with:
-          options-file: "./.github/workflows/options.json"
+          options-file: ".github/workflows/options.json"
           github-token: ${{ secrets.GITHUB_TOKEN }}
