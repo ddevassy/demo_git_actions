@@ -9,7 +9,7 @@ jobs:
         with:
           node-version: '16'      
       - name: Version Bumper
-        uses: ddevassy/version-bumper@v1.0.1
+        uses: ddevassy/version-bumper
         with:
           options-file: "./.github/workflows/options.json"
           github-token: ${{ secrets.GITHUB_TOKEN }}
