@@ -2,7 +2,7 @@
   "scheme": "semantic",
   
   // file where the current version can be found
-  "versionFile": "./package.json", 
+  "versionFile": "./VERSION", 
   "files": [
     {
       "path": // path to file containing version to be updated
