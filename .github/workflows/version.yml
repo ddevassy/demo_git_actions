@@ -13,7 +13,7 @@ jobs:
         with:
           node-version: '16'
       - name: Bump Versions
-        uses: mddevassy/version-bumper@master
+        uses: ddevassy/version-bumper@master
         with:
           scheme: semantic
           username: NTABot
